@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f1115" />
+  <title>همراه ۳۵۰</title>
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="stylesheet" href="./css/app.css" />
+  <link rel="icon" href="./icons/icon-192.png" />
+</head>
+<body>
+  <div id="app">
+    <section id="page-now" class="page active">
+      <h1 id="now-app-name">همراه ۳۵۰</h1>
+      <p class="muted" id="now-date"></p>
+      <div id="now-counter"></div>
+      <div class="card"><p class="muted">صفحه اکنون — برنامه و عادت‌های امروز اینجا نمایش داده می‌شود.</p></div>
+    </section>
+
+    <section id="page-settings" class="page">
+      <h1>تنظیمات</h1>
+      <div id="settings-msg"></div>
+      <div class="card">
+        <div class="form-group">
+          <label>نام اپ</label>
+          <input id="set-appName" type="text" />
+        </div>
+        <div class="form-group">
+          <label>تاریخ شروع ۳۵۰ روز (میلادی)</label>
+          <input id="set-startDate" type="date" />
+        </div>
+        <div class="form-group">
+          <label>کلید Gemini API</label>
+          <input id="set-apiKey" type="password" />
+        </div>
+        <div class="form-group">
+          <label>مدل</label>
+          <input id="set-apiModel" type="text" value="gemini-2.0-flash" />
+        </div>
+        <button id="btn-save-settings" class="btn btn-primary btn-block">ذخیره</button>
+      </div>
+      <div class="card">
+        <h2>پشتیبان</h2>
+        <button id="btn-export" class="btn btn-primary btn-block" style="margin-bottom:8px">خروجی JSON</button>
+        <button id="btn-import" class="btn btn-ghost btn-block">ورود JSON</button>
+        <input id="import-file" type="file" accept="application/json" style="display:none" />
+      </div>
+    </section>
+
+    <nav class="bottom-nav">
+      <button class="nav-item active" data-page="now"><span>اکنون</span></button>
+      <button class="nav-item" data-page="settings"><span>تنظیمات</span></button>
+    </nav>
+  </div>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
